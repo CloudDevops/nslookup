@@ -12,7 +12,7 @@ do
              NAME='Bad FQDN\n'; echo $NAME
         else
 
-             nslookup $IP | awk -F"= " '/name/{print $2}' && printf '\n';
+             nslookup $IP | awk -F"= " '/name/{print $2"\n"}';
         fi
 
       #  echo $NAME
